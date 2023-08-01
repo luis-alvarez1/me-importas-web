@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background: #ffecee;
+  min-height: 100vh;
+}
+
+.form {
+  align-items: center;
+  justify-content: center;
+  max-width: 2000px;
+  max-height: 1000px;
+  flex-direction: column;
+  background: rgb(233, 173, 95);
+  text-align: center;
+  padding: 27px;
+  border: 4px solid black;
+  height: 330px;
+  width: 170;
+  margin-top: -150px;
+  transform: scale(1.5);
+}
+
+.form label {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.logbutton {
+  background-color: rgb(255, 139, 159);
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.forgotpas {
+  color: black;
+  font-weight: bold;
+  margin-top: 30px;
+}
