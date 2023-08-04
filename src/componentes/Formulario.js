@@ -22,14 +22,14 @@ const Formulario = () => {
             <div>
           <label>
             <input
-              type="checkbox" checked={recuerdame} onChange={handleRecuerdameChange}/>
+              type="checkbox" checked={recuerdame} onChange={handleRecuerdameChange} className='remeber'/>
             Recuérdame
           </label>
         </div>
             <a href="#" className="forgotpas">¿Has olvidado tu contraseña? Recuperala</a>
             <br></br>
             <button id="button" className="logbutton">INICIAR SESIÓN</button>
-            <a href='#' className='forgotpas'>¿No tienes cuenta? Registrate</a>
+            <a href='' className='forgotpas'>¿No tienes cuenta? Registrate</a>
         </form>
     </div>
 }

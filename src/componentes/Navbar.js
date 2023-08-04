@@ -5,7 +5,7 @@ const NavBar = () => {
     <>
       <nav
       style={{
-        backgroundColor: "#ffecee",
+        backgroundColor: "#012161",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -24,7 +24,7 @@ const NavBar = () => {
             style={{
               margin: '0 1rem',
               fontWeight: 'bold',
-              color: 'black',
+              color: 'white',
               letterSpacing: '0.1rem',
               textTransform: 'uppercase',
               listStyle: 'none',
