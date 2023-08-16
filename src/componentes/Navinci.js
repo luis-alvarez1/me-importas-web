@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const Navinci = () => {
   return (
     <>
       <nav
@@ -31,7 +31,7 @@ const NavBar = () => {
             }}
             
           >
-            Me importas
+            Registrar: pendiente
           </li>
         </ul>
       </nav>
@@ -39,4 +39,4 @@ const NavBar = () => {
   );
 }
 
-export default NavBar;
+export default Navinci;
