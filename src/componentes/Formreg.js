@@ -1,40 +1,72 @@
 import React from "react";
-import '../Styles/Formreg.css';
+import "../Styles/Formreg.css";
 const Formreg = () => {
-    return<div className="reg">
-        <form action="" className="formreg">
-          <div>
-            <label for="">
-                <h6 className="btn-1">Ingrese el correo</h6>
-                <input className="btn-1" type="text"  id="email" placeholder='Ingrese el Correo' ClassName="space-inp"></input>
-            </label>
-            <label for="">
-                <h6 className="btn-6">Ingrese el Usuario</h6>
-                <input className="btn-6" type="text" id="name" placeholder='Ingrese el Usuario'></input>
-            </label>
-            <br></br>
-            <label for="">
-                <h6 className="btn-2">Ingresar telefono(opcional) </h6>
-                <input className="btn-2" type="text" id="number" placeholder='Ingrese el telefono'></input>
-            </label>
-            <label for="">
-                <h6 className="btn-4">Ingrese la contraseña</h6>
-                <input type="text" id="password" placeholder='Ingrese la Contraseña'></input>
-            </label>
-            <br></br>
-            <label for="">
-                <h6 className="btn-3">Confirme la contraseña</h6>
-                <input className="btn-3" type="text" id="password" placeholder='Confirme la contraseña'></input>
-            </label> 
-            <label>
-            <input type="checkbox"></input>Acepto los términos <br></br>y condiciones</label>
-            </div>
-            <br></br>
-            <button id="button" className="logbutton">CREAR CUENTA</button>
-            <a href='Formulario.js' className='relog'>¿Ya tienes una cuenta? Inicia sesion</a>
-        </form>
-        
+  return (
+    <div className="m-0 p-0 ">
+      <h1 className="text-center">Registro</h1>
+      <form action="" className="bg-primary d-flex flex-column text-center p-4 border border-dark border" style={{maxWidth: '500px', maxHeight:'1900px', height: '350px', width: '500px', marginLeft: '30%', marginTop: '90px', transform: 'scale(1.3)'}}>
+        <div>
+          <label for="" className="p-10" style={{marginBottom: '20px'}}>
+            <h6 style={{marginRight: '30px'}}>Ingrese el correo</h6>
+            <input
+              type="text"
+              id="email"
+              placeholder="Ingrese el Correo"
+              style={{marginRight: '30px'}}
+            ></input>
+          </label>
+          <label for="">
+            <h6 style={{marginLeft: '40px'}}>Ingrese el Usuario</h6>
+            <input
+              style={{marginLeft: '40px'}}
+              type="text"
+              id="name"
+              placeholder="Ingrese el Usuario"
+            ></input>
+          </label>
+          <br></br>
+          <label for="">
+            <h6 style={{marginRight: '58px'}}>Ingresar telefono(opcional) </h6>
+            <input
+              style={{marginRight: '58px'}}
+              type="text"
+              id="number"
+              placeholder="Ingrese el telefono"
+            ></input>
+          </label>
+          <label for="">
+            <h6>Ingrese la contraseña</h6>
+            <input
+              type="text"
+              id="password"
+              placeholder="Ingrese la Contraseña"
+            ></input>
+          </label>
+          <br></br>
+          <label for="">
+            <h6 style={{marginRight: '80px'}}>Confirme la contraseña</h6>
+            <input
+              style={{marginRight: '80px'}}
+              type="text"
+              id="password"
+              placeholder="Confirme la contraseña"
+            ></input>
+          </label>
+          <label>
+            <input type="checkbox"></input>Acepto los términos <br></br>y
+            condiciones
+          </label>
+        </div>
+        <br></br>
+        <button id="button" className="bg-danger fw-bold fs-3">
+          CREAR CUENTA
+        </button>
+        <a href="Formulario.js" className="text-black fw-bold mt-auto">
+          ¿Ya tienes una cuenta? Inicia sesion
+        </a>
+      </form>
     </div>
-}
+  );
+};
 
-export default Formreg; 
+export default Formreg;

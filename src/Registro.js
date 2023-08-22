@@ -7,7 +7,11 @@ function Registro() {
 <div className="App">
       <div className="row">
         <div className="col">
+          <NavBar />
+          <div/>
+          <div>
           <Formreg/>
+          </div>
         </div>
       </div>
       

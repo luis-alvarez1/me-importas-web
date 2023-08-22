@@ -4,7 +4,6 @@ import Formulario from "./componentes/Formulario";
 import Registro from "./Registro";
 
 function App() {
-  const [isLoginPage, setIsLoginPage] = useState(true);
 
   return (
     <div className="App">
@@ -15,7 +14,7 @@ function App() {
       </div>
       <div>
         <center>
-          <h1>{isLoginPage ? "Inicio de sesión" : "Registro"}</h1>
+          <h1>Incio de sesion</h1>
         </center>
         <div
           style={{
@@ -24,13 +23,9 @@ function App() {
             justifyContent: "center",
             minHeight: "100vh",
           }}
-        >
-          {isLoginPage ? <Formulario /> : <Registro />}
+        ><Formulario />
         </div>
       </div>
-      <button onClick={() => setIsLoginPage((prev) => !prev)}>
-        {isLoginPage ? "Ir a Registro" : "Ir a Inicio de sesión"}
-      </button>
     </div>
   );
 }

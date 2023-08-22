@@ -2,41 +2,14 @@ import React from "react";
 
 const Navinci = () => {
   return (
-    <>
-      <nav
-      style={{
-        backgroundColor: "#012161",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-        <ul
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            margin: 0,
-            height: '6rem',
-          }}
-        >
-          <li
-            style={{
-              margin: '0 1rem',
-              fontWeight: 'bold',
-              color: 'white',
-              letterSpacing: '0.1rem',
-              textTransform: 'uppercase',
-              listStyle: 'none',
-            }}
-            
-          >
-            Registrar: pendiente
-          </li>
-        </ul>
-      </nav>
-    </>
+    <div>
+        <nav className='navbar navbar-expand-lg d-flex align-items-center justify-content-center' style={{ backgroundColor: '#012161', width: '1080px', }}>
+          <ul className='navbar-nav d-flex align-items-center justify-content-end m-0' style={{ height: '5rem' }}>
+            <li className='nav-item fw-bold text-white text-uppercase list-unstyled' style={{ letterSpacing: '0.1rem', margin: '0 1rem' }}>Registrar: Pendiente</li>
+          </ul>
+        </nav>
+        </div>
   );
-}
+};
 
 export default Navinci;

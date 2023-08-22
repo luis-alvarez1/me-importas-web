@@ -5,7 +5,6 @@ import Navinci from './componentes/Navinci';
 function Home() {
   return (
     <div>
-      <Navinci />
       <Homem />
     </div>
   );
