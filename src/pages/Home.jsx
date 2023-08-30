@@ -1,6 +1,5 @@
 import React from 'react';
-import Homem from './componentes/Homem';
-import Navinci from './componentes/Navinci';
+import Homem from '../componentes/Homem';
 
 function Home() {
   return (
