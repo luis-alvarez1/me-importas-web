@@ -4,13 +4,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Registro from './Registro';
-import Home from './Home';
+import Grupos from './Paginas/Grupos.jsx'
+import Objetivos from './Paginas/Objetivos.jsx'
+import Home from './Paginas/Home';
+import Chat from './Paginas/Chat.jsx'
+import Perfil from './Paginas/Perfil.jsx'
+import Informes from './Paginas/Informes'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Informes />
   </React.StrictMode>,
 );
 

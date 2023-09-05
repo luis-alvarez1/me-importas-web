@@ -1,77 +1,77 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navinci from "./Navinci";
+import Menu from "./Menu";
 
 const Homem = () => {
   return (
     <div className="d-flex">
-      <div
-        className="bg-light border border-end-0-black p-3 overflow-y-auto"
-        style={{ width: "300px" }}
-      >
-        <ul className="menu-list list-unstyled p-1 m-0">
-          <h3 className="border border-2 border-black text-center p-3">
-            Me importas
-          </h3>
-          <li className="list1">
-            <a
-              href="#"
-              className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-              style={{ width: "250px" }}
-            >
-              Inicio
-            </a>
-          </li>
-          <li className="list1">
-            <a
-              href="#"
-              className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-              style={{ width: "250px" }}
-            >
-              Chat
-            </a>
-          </li>
-          <li className="list1">
-            <a
-              href="#"
-              className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-              style={{ width: "250px" }}
-            >
-              Grupos
-            </a>
-          </li>
-          <li className="list1">
-            <a
-              href="#"
-              className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-              style={{ width: "250px" }}
-            >
-              Objetivos
-            </a>
-          </li>
-          <li className="list1">
-            <a
-              href="#"
-              className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-              style={{ width: "250px" }}
-            >
-              Metas
-            </a>
-          </li>
-        </ul>
-      </div>
+      <Menu />
       <div>
-      <Navinci />
-      <div>
-      <form action="">
-        <label htmlFor="">
-          <h5>Registrar</h5>
-          <input type="text" name="" id="" />
-        </label>
-      </form>
+        <Navinci />
+        <div className="border my-2 d-flex">
+          <form action="" className="p-4">
+            <label htmlFor="" className="d-flex">
+              <h5 className="mx-5">Pendiente</h5>
+              <input type="text" className="rounded" />
+            </label>
+            <br />
+            <label htmlFor="" className="d-flex">
+              <h5 className="mx-5">Fecha</h5>
+              <input type="date" className="rounded" />
+            </label>
+            <br />
+            <br />
+            <button class="btn btn-primary mx-5" type="submit">
+              Registrar
+            </button>
+          </form>
+        </div>
+        <div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Pendiente #1</th>
+                <td>Resolver taller de matemáticas</td>
+                <td>Agoste 1, Martes</td>
+                <td>
+                  <button type="button" class="btn">
+                    Terminado
+                  </button>{" "}
+                  <button type="button" class="btn">
+                    Editar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th>Pendiente #2</th>
+                <td>Leer libro para la clase de español</td>
+                <td>Octubre 30, Lunes</td>
+                <td>
+                  <button type="button" class="btn">
+                    Terminado
+                  </button>{" "}
+                  <button type="button" class="btn">
+                    Editar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th>Pendiente #3</th>
+                <td colspan="2"></td>
+                <td>
+                  <button type="button" class="btn">
+                    Terminado
+                  </button>{" "}
+                  <button type="button" class="btn">
+                    Editar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      </div>
-  
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../Styles/Formulario.css";
 
 const Formulario = () => {
   const [recuerdame, setRecuerdame] = useState(false);
