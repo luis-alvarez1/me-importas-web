@@ -94,6 +94,38 @@ const Chat = () => {
               </li>
             </ul>
           </div>
+          <div className="container mt-5" style={{marginRight: '-40px'}}>
+      <div className="row">
+        <div className="col-md-10 offset-md-1">
+          <div className="card">
+            <div className="card-header bg-primary text-white">
+              Chat Room
+            </div>
+            <div className="card-body chat-box">
+              <div className="message received mb-3">
+                <p className="h4">Hi there!</p>
+              </div>
+              <div className="message sent mb-3">
+                <p className="h4">Hello!</p>
+              </div>
+              {/* Más mensajes aquí */}
+            </div>
+            <div className="card-footer">
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Type your message"
+                />
+                <div className="input-group-append">
+                  <button className="btn btn-primary">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </div>

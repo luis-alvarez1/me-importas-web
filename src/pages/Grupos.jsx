@@ -33,11 +33,7 @@ const Grupos = () => {
             <br />
             <div className="d-flex mx-3">
               <h3>Silenciar grupo</h3>
-              <input
-                type="checkbox"
-                className="mx-3"
-                style={{ width: "12%" }}
-              />
+              <input className="form-check-input m-3" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
             </div>
             <br />
             <div className="d-flex mx-3">

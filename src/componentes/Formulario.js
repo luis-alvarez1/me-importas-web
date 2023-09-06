@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import '../Styles/Formulario.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Formulario = () => {
   const [recuerdame, setRecuerdame] = useState(false);
@@ -31,8 +30,8 @@ const Formulario = () => {
         <div>
           <label>
             <input
-              className='m-3'
-              type='checkbox'
+              className="m-3"
+              type="checkbox"
               checked={recuerdame}
               onChange={handleRecuerdameChange}
               style={{ width: '20px', height: '20px' }}
@@ -55,7 +54,7 @@ const Formulario = () => {
         >
           INICIAR SESIÓN
         </button>
-        <Link to='registro' className='text-decoration-none text-black fw-bold'>
+        <Link to="registro" className="text-decoration-none text-black fw-bold">
           ¿No tienes cuenta? Registrate
         </Link>
       </form>

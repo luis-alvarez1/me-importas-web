@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/Formreg.css";
 import { Link } from "react-router-dom";
+
 const Formreg = () => {
   return (
     <div className="m-0 p-0 ">
