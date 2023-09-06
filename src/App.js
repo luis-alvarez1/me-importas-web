@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import NavBar from "./componentes/Navbar";
-import Formulario from "./componentes/Formulario";
-import Registro from "./Registro";
+import React, { useState } from 'react';
+import NavBar from './componentes/Navbar';
+import Formulario from './componentes/Formulario';
 
 function App() {
-
   return (
-    <div className="App">
-      <div className="row">
-        <div className="col">
+    <div className='App'>
+      <div className='row'>
+        <div className='col'>
           <NavBar />
         </div>
       </div>
@@ -18,12 +16,13 @@ function App() {
         </center>
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: "100vh",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '100vh',
           }}
-        ><Formulario />
+        >
+          <Formulario />
         </div>
       </div>
     </div>
