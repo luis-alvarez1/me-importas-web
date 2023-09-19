@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Formreg = () => {
   return (
-    <div className="m-0 p-0 ">
+    <div className="m-0 p-0 bg-primary-subtle" style={{ minHeight: "100vh", width: "100%" }}>
       <h1 className="text-center">Registro</h1>
       <form
         action=""
-        className="bg-primary d-flex flex-column text-center p-4 border border-dark border"
+        className="rounded bg-primary d-flex flex-column text-center p-4 border border-dark border"
         style={{
           maxWidth: "500px",
           maxHeight: "1900px",
@@ -73,9 +73,7 @@ const Formreg = () => {
           </label>
         </div>
         <br></br>
-        <button id="button" className="bg-danger fw-bold fs-3">
-          CREAR CUENTA
-        </button>
+        <button type="button" class="btn btn-danger text-black fw-bold">CREAR CUENTA</button>
         <Link to="/" className="text-black fw-bold mt-auto">
           ¿Ya tienes una cuenta? Inicia sesion
         </Link>

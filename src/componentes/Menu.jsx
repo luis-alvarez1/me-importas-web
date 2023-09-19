@@ -3,63 +3,45 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Menu = () => {
   return (
-  <div>
-    <div
-      className="bg-light border border-end-0-black p-3 overflow-y-auto"
-      style={{ width: "300px" }}
-    >
-      <ul className="menu-list list-unstyled p-1 m-0">
-        <h3 className="border border-2 border-black text-center p-3">
-          Me importas
-        </h3>
-        <li className="list1">
-          <a
-            href="#"
-            className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-            style={{ width: "250px" }}
+    <div className="container-fluid bg-primary-subtle border-end border-black vh-100">
+      <div className="col my-5 border-bottom border-black">
+        <h1>Me importas</h1>
+      </div>
+      <div className="col-md-4">
+        <div className="bg-primary-subtle p-3">
+          <button
+            className="btn btn-primary mt-3 btn-lg p-3"
+            style={{ display: "block", width: "400%" }}
           >
             Inicio
-          </a>
-        </li>
-        <li className="list1">
-          <a
-            href="#"
-            className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-            style={{ width: "250px" }}
+          </button>
+          <button
+            className="btn btn-primary mt-3 btn-lg p-3"
+            style={{ display: "block", width: "400%" }}
           >
             Chat
-          </a>
-        </li>
-        <li className="list1">
-          <a
-            href="#"
-            className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-            style={{ width: "250px" }}
+          </button>
+          <button
+            className="btn btn-primary mt-3 btn-lg p-3"
+            style={{ display: "block", width: "400%" }}
           >
             Grupos
-          </a>
-        </li>
-        <li className="list1">
-          <a
-            href="#"
-            className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-            style={{ width: "250px" }}
+          </button>
+          <button
+            className="btn btn-primary mt-3 btn-lg p-3"
+            style={{ display: "block", width: "400%" }}
           >
             Objetivos
-          </a>
-        </li>
-        <li className="list1">
-          <a
-            href="#"
-            className="d-block border border-secondary p-5 text-center cursor-pointer border-dark p-5"
-            style={{ width: "250px" }}
+          </button>
+          <button
+            className="btn btn-primary mt-3 btn-lg p-3"
+            style={{ display: "block", width: "400%" }}
           >
             Informes
-          </a>
-        </li>
-      </ul>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
   );
 };
 

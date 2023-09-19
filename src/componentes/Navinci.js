@@ -33,7 +33,7 @@ const Navinci = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg d-flex align-items-center justify-content-center"
+        className="navbar navbar-expand-lg d-flex align-items-center"
         style={{ backgroundColor: "#012161", width: "1080px" }}
       >
         <ul

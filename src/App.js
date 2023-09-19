@@ -11,9 +11,6 @@ function App() {
         </div>
       </div>
       <div>
-        <center>
-          <h1>Incio de sesion</h1>
-        </center>
         <div
           style={{
             display: 'flex',
