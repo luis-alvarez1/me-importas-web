@@ -10,16 +10,41 @@ import Grupos from "./pages/Grupos";
 import Informes from "./pages/Informes";
 import Objetivos from "./pages/Objetivos";
 import Perfil from "./pages/Perfil";
+import Homem from "./componentes/Homem";
 
 const router = createBrowserRouter([
   {
     index: true,
-    path: "",
+    path: "/",
     element: <App />,
   },
   {
-    path: "registro",
+    path: "Registro",
     element: <Registro />,
+  },
+  {
+    path: "Home",
+    element: <Home />,
+  },
+  {
+    path: "Chat",
+    element: <Chat />,
+  },
+  {
+    path: "Grupos",
+    element: <Grupos />,
+  },
+  {
+    path: "Objetivos",
+    element: <Objetivos />,
+  },
+  {
+    path: "Informes",
+    element: <Informes />,
+  },
+  {
+    path: "Perfil",
+    element: <Perfil />,
   },
 ]);
 

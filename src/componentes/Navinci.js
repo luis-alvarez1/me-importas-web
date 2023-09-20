@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, OverlayTrigger, Popover, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Navinci = () => {
   const popover = (
@@ -20,9 +21,9 @@ const Navinci = () => {
                 <p className="card-text">
                   Estudiante del instituto icolven del grado 10
                 </p>
-                <button class="btn btn-primary" type="submit">
+                <Link to="/Perfil" class="btn btn-primary" type="submit">
                   editar perfil
-                </button>
+                </Link>
               </div>
             </div>
           </div>

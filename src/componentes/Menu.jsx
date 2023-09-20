@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -9,36 +10,41 @@ const Menu = () => {
       </div>
       <div className="col-md-4">
         <div className="bg-primary-subtle p-3">
-          <button
+          <Link
+            to="/Home"
             className="btn btn-primary mt-3 btn-lg p-3"
             style={{ display: "block", width: "400%" }}
           >
             Inicio
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/Chat"
             className="btn btn-primary mt-3 btn-lg p-3"
             style={{ display: "block", width: "400%" }}
           >
             Chat
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/Grupos"
             className="btn btn-primary mt-3 btn-lg p-3"
             style={{ display: "block", width: "400%" }}
           >
             Grupos
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/Objetivos"
             className="btn btn-primary mt-3 btn-lg p-3"
             style={{ display: "block", width: "400%" }}
           >
             Objetivos
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/Informes"
             className="btn btn-primary mt-3 btn-lg p-3"
             style={{ display: "block", width: "400%" }}
           >
             Informes
-          </button>
+          </Link>
         </div>
       </div>
     </div>

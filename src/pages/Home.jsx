@@ -1,5 +1,5 @@
-import React from 'react';
-import Homem from '../componentes/Homem';
+import React from "react";
+import Homem from "../componentes/Homem";
 
 function Home() {
   return (
