@@ -7,22 +7,21 @@ const Navinci = () => {
     <Popover>
       <Popover.Header as="h2">Perfil</Popover.Header>
       <Popover.Body>
-        <div className="card m-3 mx-5" style={{ maxWidth: "540px" }}>
+        <div className="container card m-3 mx-1">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-5 mt-5">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppkoKsaYMuIoNLDH7O8ePOacLPG1mKXtEng&usqp=CAU"
                 className="img-fluid rounded-start"
               />
             </div>
-            <div className="d-flex">
+            <div className="col d-flex">
               <div className="card-body">
-                <h5 className="card-title">Name</h5>
                 <p className="card-text">
                   Estudiante del instituto icolven del grado 10
                 </p>
                 <Link to="/Perfil" class="btn btn-primary" type="submit">
-                  editar perfil
+                  Editar
                 </Link>
               </div>
             </div>

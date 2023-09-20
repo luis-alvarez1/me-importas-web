@@ -26,72 +26,57 @@ const Chat = () => {
         </nav>
         <div className="d-flex">
           <div
-            className="border border-secondary p-3 overflow-y-auto"
-            style={{ width: "200px" }}
+            className="border border-secondary p-3 bg-primary-subtle overflow-y-auto"
+            style={{ width: "15rem" }}
           >
             <ul className="menu-list list-unstyled p-1 m-0">
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  David
-                </a>
+                  Saray
+                </button>
               </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  Cami
-                </a>
+                  Kamil
+                </button>
               </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  Carlos
-                </a>
+                  Luis
+                </button>
               </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  Sofia
-                </a>
+                  Liz
+                </button>
               </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  Alejo
-                </a>
+                  Isharo
+                </button>
               </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
+              <li>
+                <button
+                  className="btn btn-warning btn-lg p-3 m-2"
                   style={{ width: "150px" }}
                 >
-                  Manuel
-                </a>
-              </li>
-              <li className="list1">
-                <a
-                  href="#"
-                  className="text-decoration-none text-bg-light d-block border border-secondary p-4 text-center cursor-pointer border-dark"
-                  style={{ width: "150px" }}
-                >
-                  Danna
-                </a>
+                  Yheyson
+                </button>
               </li>
             </ul>
           </div>

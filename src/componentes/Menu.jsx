@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  const routeStyles = { display: "block", width: "400%" }
   return (
     <div className="container-fluid bg-primary-subtle border-end border-black vh-100">
       <div className="col my-5 border-bottom border-black">
@@ -13,35 +14,35 @@ const Menu = () => {
           <Link
             to="/Home"
             className="btn btn-primary mt-3 btn-lg p-3"
-            style={{ display: "block", width: "400%" }}
+            style={routeStyles}
           >
             Inicio
           </Link>
           <Link
             to="/Chat"
             className="btn btn-primary mt-3 btn-lg p-3"
-            style={{ display: "block", width: "400%" }}
+            style={routeStyles}
           >
             Chat
           </Link>
           <Link
             to="/Grupos"
             className="btn btn-primary mt-3 btn-lg p-3"
-            style={{ display: "block", width: "400%" }}
+            style={routeStyles}
           >
             Grupos
           </Link>
           <Link
             to="/Objetivos"
             className="btn btn-primary mt-3 btn-lg p-3"
-            style={{ display: "block", width: "400%" }}
+            style={routeStyles}
           >
             Objetivos
           </Link>
           <Link
             to="/Informes"
             className="btn btn-primary mt-3 btn-lg p-3"
-            style={{ display: "block", width: "400%" }}
+            style={routeStyles}
           >
             Informes
           </Link>
