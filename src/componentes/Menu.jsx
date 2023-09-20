@@ -13,35 +13,35 @@ const Menu = () => {
         <div className="bg-primary-subtle p-3">
           <Link
             to="/Home"
-            className="btn btn-primary mt-3 btn-lg p-3"
+            className="btn btn-primary mt-3 p-3"
             style={routeStyles}
           >
             Inicio
           </Link>
           <Link
             to="/Chat"
-            className="btn btn-primary mt-3 btn-lg p-3"
+            className="btn btn-primary mt-3 p-3"
             style={routeStyles}
           >
             Chat
           </Link>
           <Link
             to="/Grupos"
-            className="btn btn-primary mt-3 btn-lg p-3"
+            className="btn btn-primary mt-3 p-3"
             style={routeStyles}
           >
             Grupos
           </Link>
           <Link
             to="/Objetivos"
-            className="btn btn-primary mt-3 btn-lg p-3"
+            className="btn btn-primary mt-3 p-3"
             style={routeStyles}
           >
             Objetivos
           </Link>
           <Link
             to="/Informes"
-            className="btn btn-primary mt-3 btn-lg p-3"
+            className="btn btn-primary mt-3 p-3"
             style={routeStyles}
           >
             Informes
