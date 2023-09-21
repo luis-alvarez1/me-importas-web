@@ -96,17 +96,14 @@ const Formulario = () => {
           />
         </div>
         <button
-          className="btn text-decoration-none text-black p-4 fw-bold"
-          style={{ marginTop: '10px' }}
+          className="btn text-decoration-none text-black p-3 fw-bold"
         >
           ¿Has olvidado tu contraseña? Recuperala
         </button>
-        <br></br>
         <button
           id="button"
           type="submit"
           className="bg-danger fs-4 fw-bold btn text-white"
-          style={{ marginTop: '10px' }}
         >
           {loading ? 'Cargando...' : 'INICIAR SESIÓN'}
         </button>

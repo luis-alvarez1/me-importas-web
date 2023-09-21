@@ -3,23 +3,17 @@ import { Link } from "react-router-dom";
 
 const Formreg = () => {
   return (
-    <div className="m-0 p-0 bg-primary-subtle" style={{ minHeight: "100vh", width: "100%" }}>
+    <div className="m-0 p-0 bg-primary-subtle d-flex flex-column align-item-center vw-100 vh-100">
       <h1 className="text-center">Registro</h1>
       <form
         action=""
-        className="rounded bg-primary d-flex flex-column text-center p-4 border border-dark border"
+        className="rounded bg-primary d-flex flex-column text-center p-4 border border-dark"
         style={{
-          maxWidth: "500px",
-          maxHeight: "1900px",
-          height: "350px",
-          width: "500px",
-          marginLeft: "30%",
-          marginTop: "90px",
-          transform: "scale(1.3)",
+          alignSelf: 'center',
         }}
       >
         <div>
-          <label for="" className="p-10" style={{ marginBottom: "20px" }}>
+          <label for="" className="mb-20 mx-3">
             <h6 style={{ marginRight: "30px" }}>Ingrese el correo</h6>
             <input
               type="text"
@@ -73,8 +67,8 @@ const Formreg = () => {
           </label>
         </div>
         <br></br>
-        <button type="button" class="btn btn-danger text-black fw-bold">CREAR CUENTA</button>
-        <Link to="/" className="text-black fw-bold mt-auto">
+        <button type="button" class="bg-danger fs-4 fw-bold btn text-white">CREAR CUENTA</button>
+        <Link to="/" className="text-decoration-none text-black fw-bold">
           ¿Ya tienes una cuenta? Inicia sesion
         </Link>
       </form>
