@@ -1,40 +1,79 @@
 import React from "react";
-import '../Styles/Formreg.css';
-const Formreg = () => {
-    return<div className="reg">
-        <form action="" className="formreg">
-          <div>
-            <label for="">
-                <h6 className="btn-1">Ingrese el correo</h6>
-                <input className="btn-1" type="text"  id="email" placeholder='Ingrese el Correo' ClassName="space-inp"></input>
-            </label>
-            <label for="">
-                <h6 className="btn-6">Ingrese el Usuario</h6>
-                <input className="btn-6" type="text" id="name" placeholder='Ingrese el Usuario'></input>
-            </label>
-            <br></br>
-            <label for="">
-                <h6 className="btn-2">Ingresar telefono(opcional) </h6>
-                <input className="btn-2" type="text" id="number" placeholder='Ingrese el telefono'></input>
-            </label>
-            <label for="">
-                <h6 className="btn-4">Ingrese la contraseña</h6>
-                <input type="text" id="password" placeholder='Ingrese la Contraseña'></input>
-            </label>
-            <br></br>
-            <label for="">
-                <h6 className="btn-3">Confirme la contraseña</h6>
-                <input className="btn-3" type="text" id="password" placeholder='Confirme la contraseña'></input>
-            </label> 
-            <label>
-            <input type="checkbox"></input>Acepto los términos <br></br>y condiciones</label>
-            </div>
-            <br></br>
-            <button id="button" className="logbutton">CREAR CUENTA</button>
-            <a href='Formulario.js' className='relog'>¿Ya tienes una cuenta? Inicia sesion</a>
-        </form>
-        
-    </div>
-}
+import { Link } from "react-router-dom";
 
-export default Formreg; 
+const Formreg = () => {
+  return (
+    <div className="m-0 p-0 bg-primary-subtle d-flex flex-column align-item-center vw-100 vh-100">
+      <h1 className="text-center">Registro</h1>
+      <form
+        action=""
+        className="rounded bg-primary d-flex flex-column text-center p-4 border border-dark"
+        style={{
+          alignSelf: 'center',
+        }}
+      >
+        <div>
+          <label for="" className="mb-20 mx-3">
+            <h6 style={{ marginRight: "30px" }}>Ingrese el correo</h6>
+            <input
+              type="text"
+              id="email"
+              placeholder="Ingrese el Correo"
+              style={{ marginRight: "30px" }}
+            ></input>
+          </label>
+          <label for="">
+            <h6 style={{ marginLeft: "40px" }}>Ingrese el Usuario</h6>
+            <input
+              style={{ marginLeft: "40px" }}
+              type="text"
+              id="name"
+              placeholder="Ingrese el Usuario"
+            ></input>
+          </label>
+          <br></br>
+          <label for="">
+            <h6 style={{ marginRight: "58px" }}>
+              Ingresar telefono(opcional){" "}
+            </h6>
+            <input
+              style={{ marginRight: "58px" }}
+              type="text"
+              id="number"
+              placeholder="Ingrese el telefono"
+            ></input>
+          </label>
+          <label for="">
+            <h6>Ingrese la contraseña</h6>
+            <input
+              type="text"
+              id="password"
+              placeholder="Ingrese la Contraseña"
+            ></input>
+          </label>
+          <br></br>
+          <label for="">
+            <h6 style={{ marginRight: "80px" }}>Confirme la contraseña</h6>
+            <input
+              style={{ marginRight: "80px" }}
+              type="text"
+              id="password"
+              placeholder="Confirme la contraseña"
+            ></input>
+          </label>
+          <label>
+            <input type="checkbox"></input>Acepto los términos <br></br>y
+            condiciones
+          </label>
+        </div>
+        <br></br>
+        <button type="button" class="bg-danger fs-4 fw-bold btn text-white">CREAR CUENTA</button>
+        <Link to="/" className="text-decoration-none text-black fw-bold">
+          ¿Ya tienes una cuenta? Inicia sesion
+        </Link>
+      </form>
+    </div>
+  );
+};
+
+export default Formreg;
