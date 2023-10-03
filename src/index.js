@@ -16,7 +16,7 @@ import client from './apollo/client';
 const router = createBrowserRouter([
     {
         index: true,
-        path: '/',
+        path: '/me-importas-web',
         element: <App />,
     },
     {
