@@ -15,37 +15,38 @@ import client from './apollo/client';
 
 const router = createBrowserRouter([
     {
-        index: true,
-        path: '/me-importas-web',
-        element: <App />,
-    },
-    {
-        path: 'Registro',
-        element: <Registro />,
-    },
-    {
-        path: 'Home',
-        element: <Home />,
-    },
-    {
-        path: 'Chat',
-        element: <Chat />,
-    },
-    {
-        path: 'Grupos',
-        element: <Grupos />,
-    },
-    {
-        path: 'Objetivos',
-        element: <Objetivos />,
-    },
-    {
-        path: 'Informes',
-        element: <Informes />,
-    },
-    {
-        path: 'Perfil',
-        element: <Perfil />,
+        path: 'me-importas-web',
+        children: [
+            { path: '', element: <App />, index: true, id: 'Login' },
+            {
+                path: 'Registro',
+                element: <Registro />,
+            },
+            {
+                path: 'Home',
+                element: <Home />,
+            },
+            {
+                path: 'Chat',
+                element: <Chat />,
+            },
+            {
+                path: 'Grupos',
+                element: <Grupos />,
+            },
+            {
+                path: 'Objetivos',
+                element: <Objetivos />,
+            },
+            {
+                path: 'Informes',
+                element: <Informes />,
+            },
+            {
+                path: 'Perfil',
+                element: <Perfil />,
+            },
+        ],
     },
 ]);
 
