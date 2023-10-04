@@ -1,7 +1,71 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { gql, useMutation } from '@apollo/client';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Formreg = () => {
+
+const navigate=useNavigate ()   
+
+const [correo, setCorreo]=useState("")
+const handleCorreo=(e)=>{
+setCorreo (e.target.value)
+}   
+
+const [usuario, setUsuario]=useState("")
+const handleUsuario=(e)=>{
+    setUsuario(e.target.value)
+}
+
+const [documento, setDocumento]=useState("")
+const handleDocumento=(e)=>{
+    setDocumento (e.target.value)
+}
+
+const [contrasena, setContrasena]=useState("")
+const handleContrasena=(e)=>{
+    setContrasena (e.target.value)
+}
+
+const [confirmContrasena, setConfirmContrasena]=useState("")
+const handleConfirmContrasena=(e)=>{
+    setConfirmContrasena (e.target.value)
+}
+
+const REGISTRO=gql`
+mutation Registro ($name:String, $mail:String, $document:String, $password:String){
+    createUser(
+    user: {
+        name: $name
+        mail: $mail
+        document: $document
+        password: $password
+    }
+    ) {
+    _id
+    name
+    mail
+    document
+    password
+    }
+}`
+
+const [registro, {loading}]=useMutation(REGISTRO, {variables:{
+    name: usuario,
+    mail:correo,
+    document: documento,
+    password: contrasena
+}})
+
+const handleSubmit= async ()=>{ 
+try {
+    await registro ()
+    navigate ("..")
+} catch (error) {
+    
+}
+}
+
+
     return (
         <div className="m-0 p-0 bg-primary-subtle d-flex flex-column align-item-center vw-100 vh-100">
             <h1 className="text-center">Registro</h1>
@@ -11,12 +75,15 @@ const Formreg = () => {
                 style={{
                     alignSelf: 'center',
                 }}
+                onSubmit={handleSubmit}
             >
                 <div>
                     <label htmlFor="" className="mb-20 mx-3">
                         <h6 style={{ marginRight: '30px' }}>Ingrese el correo</h6>
                         <input
                             type="text"
+                            value={correo}
+                            onChange={handleCorreo}
                             id="email"
                             placeholder="Ingrese el Correo"
                             style={{ marginRight: '30px' }}
@@ -27,24 +94,30 @@ const Formreg = () => {
                         <input
                             style={{ marginLeft: '40px' }}
                             type="text"
+                            value={usuario}
+                            onChange={handleUsuario}
                             id="name"
                             placeholder="Ingrese el Usuario"
                         ></input>
                     </label>
                     <br></br>
                     <label htmlFor="">
-                        <h6 style={{ marginRight: '58px' }}>Ingresar telefono(opcional) </h6>
+                        <h6 style={{ marginRight: '58px' }}>Ingrese el documento</h6>
                         <input
                             style={{ marginRight: '58px' }}
                             type="text"
+                            value={documento}
+                            onChange={handleDocumento}
                             id="number"
-                            placeholder="Ingrese el telefono"
+                            placeholder="Ingrese el documento"
                         ></input>
                     </label>
                     <label htmlFor="">
                         <h6>Ingrese la contraseña</h6>
                         <input
-                            type="text"
+                            type="password"
+                            value={contrasena}
+                            onChange={handleContrasena}
                             id="password"
                             placeholder="Ingrese la Contraseña"
                         ></input>
@@ -54,7 +127,9 @@ const Formreg = () => {
                         <h6 style={{ marginRight: '80px' }}>Confirme la contraseña</h6>
                         <input
                             style={{ marginRight: '80px' }}
-                            type="text"
+                            type="password"
+                            value={confirmContrasena}
+                            onChange={handleConfirmContrasena}
                             id="password"
                             placeholder="Confirme la contraseña"
                         ></input>
@@ -64,7 +139,7 @@ const Formreg = () => {
                     </label>
                 </div>
                 <br></br>
-                <button type="button" className="bg-danger fs-4 fw-bold btn text-white">
+                <button type="submit" className="bg-danger fs-4 fw-bold btn text-white">
                     CREAR CUENTA
                 </button>
                 <Link to=".." className="text-decoration-none text-black fw-bold">
