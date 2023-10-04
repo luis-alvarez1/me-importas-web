@@ -1,6 +1,7 @@
 import { gql, useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Formreg = () => {
     const navigate = useNavigate();
@@ -56,10 +57,22 @@ const Formreg = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            if (confirmContrasena !== contrasena) {
+                return Swal.fire(
+                    'Contraseñas no coinciden',
+                    'Verifica nuevamente e intenta de nuevo',
+                    'error',
+                );
+            }
             await registro();
+            Swal.fire('¡Registro completo!', 'Ahora inicia sesión con tus credenciales', 'success');
             navigate('..');
         } catch (error) {
-            console.log(error);
+            Swal.fire(
+                '¡Información incorrecta!',
+                'Asegúrate de que los datos sean correctos',
+                'error',
+            );
         }
     };
 
@@ -78,7 +91,7 @@ const Formreg = () => {
                     <label htmlFor="" className="mb-20 mx-3">
                         <h6 style={{ marginRight: '30px' }}>Ingrese el correo</h6>
                         <input
-                            type="text"
+                            type="email"
                             value={correo}
                             onChange={handleCorreo}
                             id="email"
@@ -137,7 +150,7 @@ const Formreg = () => {
                 </div>
                 <br></br>
                 <button type="submit" className="bg-danger fs-4 fw-bold btn text-white">
-                    CREAR CUENTA
+                    {!loading ? 'CREAR CUENTA' : 'Cargando...'}
                 </button>
                 <Link to=".." className="text-decoration-none text-black fw-bold">
                     ¿Ya tienes una cuenta? Inicia sesion
