@@ -3,68 +3,65 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Formreg = () => {
+    const navigate = useNavigate();
 
-const navigate=useNavigate ()   
+    const [correo, setCorreo] = useState('');
+    const handleCorreo = (e) => {
+        setCorreo(e.target.value);
+    };
 
-const [correo, setCorreo]=useState("")
-const handleCorreo=(e)=>{
-setCorreo (e.target.value)
-}   
+    const [usuario, setUsuario] = useState('');
+    const handleUsuario = (e) => {
+        setUsuario(e.target.value);
+    };
 
-const [usuario, setUsuario]=useState("")
-const handleUsuario=(e)=>{
-    setUsuario(e.target.value)
-}
+    const [documento, setDocumento] = useState('');
+    const handleDocumento = (e) => {
+        setDocumento(e.target.value);
+    };
 
-const [documento, setDocumento]=useState("")
-const handleDocumento=(e)=>{
-    setDocumento (e.target.value)
-}
+    const [contrasena, setContrasena] = useState('');
+    const handleContrasena = (e) => {
+        setContrasena(e.target.value);
+    };
 
-const [contrasena, setContrasena]=useState("")
-const handleContrasena=(e)=>{
-    setContrasena (e.target.value)
-}
+    const [confirmContrasena, setConfirmContrasena] = useState('');
+    const handleConfirmContrasena = (e) => {
+        setConfirmContrasena(e.target.value);
+    };
 
-const [confirmContrasena, setConfirmContrasena]=useState("")
-const handleConfirmContrasena=(e)=>{
-    setConfirmContrasena (e.target.value)
-}
+    const REGISTRO = gql`
+        mutation Registro($name: String!, $mail: String!, $document: String!, $password: String!) {
+            createUser(
+                user: { name: $name, mail: $mail, document: $document, password: $password }
+            ) {
+                _id
+                name
+                mail
+                document
+                password
+            }
+        }
+    `;
 
-const REGISTRO=gql`
-mutation Registro ($name:String, $mail:String, $document:String, $password:String){
-    createUser(
-    user: {
-        name: $name
-        mail: $mail
-        document: $document
-        password: $password
-    }
-    ) {
-    _id
-    name
-    mail
-    document
-    password
-    }
-}`
+    const [registro, { loading }] = useMutation(REGISTRO, {
+        variables: {
+            name: usuario,
+            mail: correo,
+            document: documento,
+            password: contrasena,
+        },
+    });
 
-const [registro, {loading}]=useMutation(REGISTRO, {variables:{
-    name: usuario,
-    mail:correo,
-    document: documento,
-    password: contrasena
-}})
-
-const handleSubmit= async ()=>{ 
-try {
-    await registro ()
-    navigate ("..")
-} catch (error) {
-    
-}
-}
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await registro();
+            navigate('..');
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className="m-0 p-0 bg-primary-subtle d-flex flex-column align-item-center vw-100 vh-100">
