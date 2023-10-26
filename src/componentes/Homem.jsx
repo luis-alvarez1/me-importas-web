@@ -1,8 +1,7 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Navinci from './Navinci';
 import Menu from './Menu';
-
+import PendientesList from './Pendientes/PendientesList';
 const Homem = () => {
     return (
         <div className="d-flex">
@@ -27,50 +26,7 @@ const Homem = () => {
                         </button>
                     </form>
                 </div>
-                <div>
-                    <table className="table">
-                        <tbody>
-                            <tr>
-                                <th>Pendiente #1</th>
-                                <td>Resolver taller de matemáticas</td>
-                                <td>Agoste 1, Martes</td>
-                                <td>
-                                    <button type="button" className="btn">
-                                        Terminado
-                                    </button>{' '}
-                                    <button type="button" className="btn">
-                                        Editar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Pendiente #2</th>
-                                <td>Leer libro para la clase de español</td>
-                                <td>Octubre 30, Lunes</td>
-                                <td>
-                                    <button type="button" className="btn">
-                                        Terminado
-                                    </button>{' '}
-                                    <button type="button" className="btn">
-                                        Editar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Pendiente #3</th>
-                                <td colspan="2"></td>
-                                <td>
-                                    <button type="button" className="btn">
-                                        Terminado
-                                    </button>{' '}
-                                    <button type="button" className="btn">
-                                        Editar
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <PendientesList />
             </div>
         </div>
     );
