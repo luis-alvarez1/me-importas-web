@@ -18,6 +18,13 @@ const Formulario = () => {
         mutation Login($mail: String!, $password: String!) {
             login(user: { mail: $mail, password: $password }) {
                 token
+                user{
+                    _id
+                    name
+                    mail
+                    document
+                    password
+                }
             }
         }
     `;
@@ -41,6 +48,7 @@ const Formulario = () => {
             const { data } = await login();
 
             localStorage.setItem(LocalStorage.user_token, JSON.stringify(data.login.token));
+            localStorage.setItem(LocalStorage.user_object, JSON.stringify(data.login.user));
 
             Swal.fire({
                 title: 'Login exitoso',
